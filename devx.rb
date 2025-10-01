@@ -11,7 +11,7 @@ class Devx < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jfox85/devx/releases/download/v0.1.0/devx_0.1.0_darwin_amd64.tar.gz"
-      sha256 "2cdda9e7ab6c279c530e517cd17e95d049df58ae8a9396f352e5aa6132d4b315"
+      sha256 "7fdda90f222fa5e638977250f32520ffc4f6eec3a27825aa0aca87868c97ec50"
 
       def install
         bin.install "devx"
@@ -19,7 +19,7 @@ class Devx < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/jfox85/devx/releases/download/v0.1.0/devx_0.1.0_darwin_arm64.tar.gz"
-      sha256 "262e2979afef0c04e2a2e8c08564610ee130be1ac5cc908b93befd05b1ba6b04"
+      sha256 "88a5b50f9384e8749fa52b1fc389a40c1fd4d065c8e8a92bf713b950eccc0f65"
 
       def install
         bin.install "devx"
@@ -30,14 +30,14 @@ class Devx < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/jfox85/devx/releases/download/v0.1.0/devx_0.1.0_linux_amd64.tar.gz"
-      sha256 "82f00a6ea1ad0ce355be0fc3c79ef7199d4b349eecc210f58238b499d748edab"
+      sha256 "7d31ad880db01859bd7da53e42fb24d1f1b71d3150f076071623d0389fbd7cb6"
       def install
         bin.install "devx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/jfox85/devx/releases/download/v0.1.0/devx_0.1.0_linux_arm64.tar.gz"
-      sha256 "2b8a0f472d70532cc9d2b507da87590e4a53a2222ecd3a9ddf4f3be2a64ba69f"
+      sha256 "5c0259bfcc65cacf14dfea90ec1ae25af26de27445f821d4a6d2316ffcee2173"
       def install
         bin.install "devx"
       end
