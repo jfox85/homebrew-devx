@@ -5,21 +5,21 @@
 class Devx < Formula
   desc "macOS development environment manager with Git worktrees and tmux"
   homepage "https://github.com/jfox85/devx"
-  version "0.1.2"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jfox85/devx/releases/download/v0.1.2/devx_0.1.2_darwin_amd64.tar.gz"
-      sha256 "9c2daf35f5728134a4fb7dfd1ff1c285a5ab9b0a28b48236016a32043887f583"
+      url "https://github.com/jfox85/devx/releases/download/v0.2.0/devx_0.2.0_darwin_amd64.tar.gz"
+      sha256 "dd7f9954301840c2ffb3314d2462bd7fb1b36017aeefa4508e4d7e42a867fc4e"
 
       def install
         bin.install "devx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jfox85/devx/releases/download/v0.1.2/devx_0.1.2_darwin_arm64.tar.gz"
-      sha256 "dc1fcf96194dd6835073a16342f4559918cd2142da3f56dcb534e2ce5b5fa0ca"
+      url "https://github.com/jfox85/devx/releases/download/v0.2.0/devx_0.2.0_darwin_arm64.tar.gz"
+      sha256 "453527d912086552a64f7cb683768f8bc1d771addb7509420659298d63533f55"
 
       def install
         bin.install "devx"
@@ -29,15 +29,15 @@ class Devx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jfox85/devx/releases/download/v0.1.2/devx_0.1.2_linux_amd64.tar.gz"
-      sha256 "2773a6e9e0b1d6936e08d6dadb0810587e5a844498ae08603513f66e3d2a4427"
+      url "https://github.com/jfox85/devx/releases/download/v0.2.0/devx_0.2.0_linux_amd64.tar.gz"
+      sha256 "c2a43f5e31d14e74ed7b3e844eefbb8483a70c4aff2dd4de3cd6774f9c8b603c"
       def install
         bin.install "devx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jfox85/devx/releases/download/v0.1.2/devx_0.1.2_linux_arm64.tar.gz"
-      sha256 "24218a066bea2ed53216bbd1e62e380dc88187c3c35ef5e3b3535faba815b231"
+      url "https://github.com/jfox85/devx/releases/download/v0.2.0/devx_0.2.0_linux_arm64.tar.gz"
+      sha256 "03d58239710fc3ce2b3f9cbb58ff54b2d943c878bb757229f71b57111734273c"
       def install
         bin.install "devx"
       end
