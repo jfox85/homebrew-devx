@@ -5,23 +5,23 @@
 class Devx < Formula
   desc "macOS development environment manager with Git worktrees and tmux"
   homepage "https://github.com/jfox85/devx"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jfox85/devx/releases/download/v0.2.0/devx_0.2.0_darwin_amd64.tar.gz"
-      sha256 "dd7f9954301840c2ffb3314d2462bd7fb1b36017aeefa4508e4d7e42a867fc4e"
+      url "https://github.com/jfox85/devx/releases/download/v0.3.0/devx_0.3.0_darwin_amd64.tar.gz"
+      sha256 "bd6c05618be2a11ccd51f732a61742d8bbbe6d9ffb5b06c7a76b25a1243fe34a"
 
-      def install
+      define_method(:install) do
         bin.install "devx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jfox85/devx/releases/download/v0.2.0/devx_0.2.0_darwin_arm64.tar.gz"
-      sha256 "453527d912086552a64f7cb683768f8bc1d771addb7509420659298d63533f55"
+      url "https://github.com/jfox85/devx/releases/download/v0.3.0/devx_0.3.0_darwin_arm64.tar.gz"
+      sha256 "91aac061cf8ecee61e6adadab3ef970cf18adcd35c3dd8318c0b035113eaf989"
 
-      def install
+      define_method(:install) do
         bin.install "devx"
       end
     end
@@ -29,16 +29,16 @@ class Devx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jfox85/devx/releases/download/v0.2.0/devx_0.2.0_linux_amd64.tar.gz"
-      sha256 "c2a43f5e31d14e74ed7b3e844eefbb8483a70c4aff2dd4de3cd6774f9c8b603c"
-      def install
+      url "https://github.com/jfox85/devx/releases/download/v0.3.0/devx_0.3.0_linux_amd64.tar.gz"
+      sha256 "054abdd0c703c5bd48879aa6526c08d6d3e6aa988b3dc24caf1ba48f578b30dc"
+      define_method(:install) do
         bin.install "devx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jfox85/devx/releases/download/v0.2.0/devx_0.2.0_linux_arm64.tar.gz"
-      sha256 "03d58239710fc3ce2b3f9cbb58ff54b2d943c878bb757229f71b57111734273c"
-      def install
+      url "https://github.com/jfox85/devx/releases/download/v0.3.0/devx_0.3.0_linux_arm64.tar.gz"
+      sha256 "d30218b3e24637d882451cdadb6cacb255527af0594faa4320adfd107c1b2186"
+      define_method(:install) do
         bin.install "devx"
       end
     end
